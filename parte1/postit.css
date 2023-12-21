@@ -40,34 +40,42 @@ p{
     background-color: bisque;
     width: 240px;
     height: 200px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     transition: transform 0.3s ease-in-out;
+    animation: sticky 2.5s linear;
 }
 
 #postIt1{
     transform: rotate(-6deg);
+    
+  
 }
 
 
 #postIt2{
     transform: rotate(6deg);
     background-color: rgb(186, 236, 152);
+
 }
 
 
 #postIt3{
     transform: rotate(-8deg);
     background-color: rgb(185, 97, 236);
+
 }
 
 #postIt4{
     transform: rotate(5deg);
     background-color: bisque;
+    
+
 }
 
 
@@ -81,22 +89,41 @@ p{
 #postIt6{
     transform: rotate(4deg);
     background-color: bisque;
+  
 }
 
 
 #postIt7{
     transform: rotate(-4deg);
     background-color: rgb(203, 138, 241);
+  
 }
 
 
 #postIt8{
     transform: rotate(10deg);
     background-color: rgb(186, 236, 152);
+   
 }
 
 #postIt1:hover,#postIt2:hover,#postIt3:hover,#postIt4:hover,#postIt5:hover,#postIt6:hover,#postIt7:hover,#postIt8:hover {
     transform: scale(1.25);
     z-index: 1;
+    box-shadow: 8px 9px 10px -2px rgba(0,0,0,0.67);
 }
   
+
+@keyframes sticky {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px) translateZ(20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(15px) translateZ(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateZ(0);
+    }
+  }
